@@ -1,0 +1,168 @@
+body {
+    background-color: #f6f6ec;
+    font-family: Tahoma, serif;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 1.2rem 2% 0 2%;
+    font-weight: bold;
+    width: 96%;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: .3rem;
+}
+
+.line {
+    display: flex;
+    width: 100%;
+}
+
+.line label {
+    width: 100%;
+}
+
+ul {
+    color: #0055d8;
+    padding: 0;
+}
+
+li {
+    text-align: center;
+}
+
+ul:hover {
+    color: #000000;
+}
+
+.accordion-menu li {
+    list-style: none;
+}
+
+.accordion-menu input[type=radio] {
+    opacity: 0;
+    display: none;
+}
+
+.accordion-menu label {
+    align-items: start;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: .7rem;
+    padding: 1rem 0 1rem 0;
+    border-top: .15rem solid #e5e8e7;
+}
+
+.accordion-menu label span {
+    text-align: start;
+    width: 97%;
+}
+
+.accordion-menu label img {
+    width: 3%;
+}
+
+.accordion-menu .meme {
+    align-self: center;
+    opacity: 0;
+    height: 0;
+    color: #798f9a;
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    transition: all .7s ease;
+}
+
+.accordion-menu .plus {
+    opacity: 0;
+    color: #798f9a;
+    transition: all .7s ease;
+}
+
+.accordion-menu input[type=radio]:checked + .line > label > .meme {
+    opacity: 1;
+    height: auto;
+    margin: 1.1rem 0 0 0;
+    transition: all .7s ease;
+}
+
+.accordion-menu input[type=radio]:active + .line > label > span {
+    color: #0055d8;
+}
+
+.accordion-menu input[type=radio]:active + .line > label > .meme {
+    opacity: .7;
+    transition: all .3s ease;
+}
+
+ul:hover .plus {
+    transition: all .7s ease;
+    opacity: 1;
+}
+
+li:hover > input + .line > label > .meme {
+    opacity: 1;
+    height: auto;
+    margin: 1.1rem 0 0 0;
+}
+
+li:hover > input + .line > label .plus {
+    transform: rotate(45deg);
+}
+
+.accordion-menu input[type=radio]:checked + .line > label {
+    color: #000000;
+}
+
+.accordion-menu input[type=radio]:checked + .line > label .plus {
+    transform: rotate(45deg);
+}
+
+@media only screen and (min-width: 320px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .accordion-menu label {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .accordion-menu .meme {
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 820px) {
+    .container {
+        max-width: 50rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .accordion-menu label {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .accordion-menu label {
+        font-size: 1.5rem;
+    }
+}
